@@ -1,0 +1,26 @@
+.team-validation {
+  flex: 0 0 20%;
+  display: flex;
+  flex-direction: column;
+
+  .team-validation-item {
+    display: flex;
+    align-items: center;
+
+    .team-validation-indicator {
+      width: 10px;
+      height: 10px;
+      background-color: #d5d5d5;
+      border-radius: 50%;
+      margin-right: 15px;
+
+      &.team-validation-indicator-pass {
+        background-color: #0460a9;
+      }
+    }
+
+    .team-validation-text {
+      font-size: 14px;
+    }
+  }
+}
