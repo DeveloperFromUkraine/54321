@@ -7,7 +7,7 @@ import PersonIcon from '@mui/icons-material/Person'
 
 import { ISquad } from '../../types/competition'
 
-import styles from '../home/home.module.scss'
+import styles from './my-team.module.scss'
 
 interface IMyTeam {
   mySquad: ISquad[]

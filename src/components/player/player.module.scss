@@ -1,0 +1,10 @@
+.player-default {
+  &.selected-player {
+    background-color: #a0c7c1;
+  }
+
+  &:hover {
+    cursor: pointer;
+    background-color: lighten(#a0c7c1, 20%)
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "parserOptions": {
+    "parser": "@typescript-eslint/parser",
+    "ecmaVersion": 2021,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "plugins": ["react", "react-hooks", "@typescript-eslint", "unused-imports", "prettier", "import"],
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "env": {
+    "es6": true,
+    "browser": true,
+    "jest": true,
+    "commonjs": true,
+    "node": true
+  },
+  "rules": {
+    "max-len": ["warn", { "code": 120, "ignoreStrings": true }],
+    "no-unused-vars": "off",
+    "prefer-const": "warn",
+    "prefer-spread": "error",
+    "react/jsx-no-bind": "off",
+    "react/prop-types": "off",
+    "react/display-name": "off",
+    "react/self-closing-comp": "warn",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "@typescript-eslint/no-var-requires": 0,
+    "@typescript-eslint/no-unused-vars": [
+      "warn",
+      {
+        "args": "after-used",
+        "ignoreRestSiblings": true
+      }
+    ],
+    "@typescript-eslint/no-empty-function": "warn",
+    "@typescript-eslint/no-explicit-any": "warn",
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "@typescript-eslint/ban-ts-comment": [
+      "error",
+      {
+        "ts-ignore": "allow-with-description",
+        "ts-expect-error": true,
+        "ts-nocheck": true,
+        "ts-check": true,
+        "minimumDescriptionLength": 16
+      }
+    ],
+    "@typescript-eslint/no-inferrable-types": "error",
+    "@typescript-eslint/member-delimiter-style": [
+      "warn",
+      {
+        "multiline": {
+          "delimiter": "none",
+          "requireLast": false
+        },
+        "singleline": {
+          "delimiter": "semi",
+          "requireLast": false
+        }
+      }
+    ],
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "import/no-default-export": "error",
+    "import/order": [
+      "warn",
+      {
+        "groups": [["builtin", "external"], "internal", ["sibling", "parent", "index"], "unknown"],
+        "pathGroups": [
+          {
+            "pattern": "{.,..,@}*/**/*.{scss,css}",
+            "group": "index",
+            "position": "after"
+          },
+          {
+            "pattern": "@*/**",
+            "group": "external",
+            "position": "after"
+          }
+        ],
+        "pathGroupsExcludedImportTypes": [],
+        "newlines-between": "always"
+      }
+    ]
+  },
+}

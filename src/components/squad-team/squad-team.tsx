@@ -3,7 +3,7 @@ import cn from 'classnames'
 
 import { Button } from '@mui/material'
 
-import styles from './save-team.module.scss'
+import styles from './squad-team.module.scss'
 
 interface ISaveTeam {
   validationIndicator: {
@@ -17,7 +17,7 @@ interface ISaveTeam {
   saveTeam: () => void
 }
 
-export const SaveTeam: FC<ISaveTeam> = ({ validationIndicator, saveTeam }) => {
+export const SquadTeam: FC<ISaveTeam> = ({ validationIndicator, saveTeam }) => {
   const isValid = useMemo(() => {
     return (
       validationIndicator.coach &&

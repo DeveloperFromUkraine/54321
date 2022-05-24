@@ -1,0 +1,47 @@
+.container {
+  display: flex;
+  margin: 0 10px;
+
+  .item-list-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 33.333333%;
+    height: 400px;
+    overflow: scroll;
+  }
+
+
+  .item-wrapper {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    min-height: 40px;
+
+    .item-emblem {
+      height: 30px;
+      width: 30px;
+    }
+
+    .item-name {
+      font-size: 14px;
+      font-weight: bold;
+      padding-left: 10px;
+    }
+
+    &.active {
+      background-color: #a0c7c1;
+      pointer-events: none;
+
+      &:hover {
+        background-color: lighten(#a0c7c1, 20%)
+      }
+    }
+    &:hover {
+      cursor: pointer;
+      background-color: lighten(#a0c7c1, 20%)
+    }
+  }
+}
+.team-wrapper {
+  display: flex;
+}

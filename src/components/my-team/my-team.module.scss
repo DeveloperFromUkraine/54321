@@ -1,0 +1,76 @@
+.team {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 0 0 80%;
+
+  .player-card {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    height: 180px;
+    width: 100px;
+    border-radius: 3px;
+
+
+    .player-emblem {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      justify-content: center;
+      flex: 0 0 50%;
+    }
+
+    .item-emblem {
+      height: 50px;
+      width: 50px;
+    }
+
+    .played-info {
+      display: flex;
+      flex: 0 0 50%;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      width: 100%;
+
+      .player-info-item {
+        font-size: 14px;
+        text-align: center;
+
+        &.player-name {
+          color: #023054;
+          font-weight: bold;
+        }
+        &.player-position {
+          color: #0460a9;
+          font-size: 12px;
+        }
+        &.player-nationality {
+          color: lighten(#0460a9, 10%)
+        }
+      }
+    }
+
+    .remove-button {
+      display: none;
+    }
+
+    &:hover {
+      .remove-button {
+        display: block;
+        position: absolute;
+        top: 5px;
+        right: 5px;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

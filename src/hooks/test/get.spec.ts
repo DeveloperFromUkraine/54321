@@ -1,5 +1,5 @@
-import { getTeams } from '../../hooks/getTeams'
-import { TOKEN } from '../api-url'
+import { getTeams } from '../getTeams'
+import { TOKEN } from '../../api/api-url'
 
 describe('getTeams', () => {
   const fetchConfig = {
@@ -18,7 +18,7 @@ describe('getTeams', () => {
     } as Response | Promise<Response>)
   })
 
-  it('get all teams', async () => {
+  it('get all teams for PL', async () => {
     const teams = await getTeams('PL')
 
     expect(fetch).toHaveBeenCalledWith('/competitions/PL/teams', fetchConfig)

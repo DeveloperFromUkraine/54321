@@ -1,0 +1,12 @@
+ul {
+  list-style-type: none;
+
+  .default {
+    color: #282c34;
+    text-decoration: none;
+  }
+  .active {
+    color: green;
+    text-decoration: none;
+  }
+}
